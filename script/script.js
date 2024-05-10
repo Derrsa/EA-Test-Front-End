@@ -101,34 +101,34 @@ formBtn.addEventListener('click', (el) => {
     })
 
 // Меняем буквы в лентах при уменьшении размера экрана
-// window.addEventListener('resize', () =>{
-//     if(document.querySelector('body').clientWidth < 1000){
-//         document.querySelectorAll('.timer__info').forEach(name =>{
-//             if(name.classList.contains('timer__day')){
-//                 name.querySelector('.day__name').textContent = 'DD'
-//             } else if (name.classList.contains('timer__hour')) {
-//                 name.querySelector('.day__name').textContent = 'HH'
-//             } else if (name.classList.contains('timer__minute')) {
-//                 name.querySelector('.day__name').textContent = 'MM'
-//             } else if (name.classList.contains('timer__sec')) {
-//                 name.querySelector('.day__name').textContent = 'SS'
-//             }
-//         })
-//     }
-//     if(document.querySelector('body').clientWidth > 1000){
-//         document.querySelectorAll('.timer__info').forEach(name =>{
-//             if(name.classList.contains('timer__day')){
-//                 name.querySelector('.day__name').textContent = 'Days'
-//             } else if (name.classList.contains('timer__hour')) {
-//                 name.querySelector('.day__name').textContent = 'Hours'
-//             } else if (name.classList.contains('timer__minute')) {
-//                 name.querySelector('.day__name').textContent = 'Minutes'
-//             } else if (name.classList.contains('timer__sec')) {
-//                 name.querySelector('.day__name').textContent = 'Seconds'
-//             }
-//         })
-//     }
-// })
+window.addEventListener('resize', () =>{
+    if(document.querySelector('body').clientWidth < 1000){
+        document.querySelectorAll('.timer__info').forEach(name =>{
+            if(name.classList.contains('timer__day')){
+                name.querySelector('.day__name').textContent = 'DD'
+            } else if (name.classList.contains('timer__hour')) {
+                name.querySelector('.day__name').textContent = 'HH'
+            } else if (name.classList.contains('timer__minute')) {
+                name.querySelector('.day__name').textContent = 'MM'
+            } else if (name.classList.contains('timer__sec')) {
+                name.querySelector('.day__name').textContent = 'SS'
+            }
+        })
+    }
+    if(document.querySelector('body').clientWidth > 1000){
+        document.querySelectorAll('.timer__info').forEach(name =>{
+            if(name.classList.contains('timer__day')){
+                name.querySelector('.day__name').textContent = 'Days'
+            } else if (name.classList.contains('timer__hour')) {
+                name.querySelector('.day__name').textContent = 'Hours'
+            } else if (name.classList.contains('timer__minute')) {
+                name.querySelector('.day__name').textContent = 'Minutes'
+            } else if (name.classList.contains('timer__sec')) {
+                name.querySelector('.day__name').textContent = 'Seconds'
+            }
+        })
+    }
+})
 
 
 
