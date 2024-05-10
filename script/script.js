@@ -101,7 +101,7 @@ formBtn.addEventListener('click', (el) => {
     })
 
 // Меняем буквы в лентах при уменьшении размера экрана
-window.addEventListener('resize', () =>{
+function changeTimerBlockName() {
     if(document.querySelector('body').clientWidth < 1000){
         document.querySelectorAll('.timer__info').forEach(name =>{
             if(name.classList.contains('timer__day')){
@@ -128,6 +128,10 @@ window.addEventListener('resize', () =>{
             }
         })
     }
+}
+changeTimerBlockName()
+window.addEventListener('resize', () =>{
+    changeTimerBlockName()
 })
 
 

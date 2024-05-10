@@ -6,13 +6,8 @@ html, body {
 .wrapper {
   position: relative;
   display: flex;
-  flex-shrink: 1;
   flex-direction: column;
-}
-@media all and (max-width: 500px) {
-  .wrapper {
-    display: inline-flex;
-  }
+  min-height: 100%;
 }
 .wrapper::after {
   position: absolute;
@@ -63,7 +58,7 @@ html, body {
 }
 
 main {
-  flex-grow: 1;
+  flex: 1 1 auto;
   margin-bottom: 50px;
   padding: 0 40px;
 }
