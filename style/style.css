@@ -233,6 +233,13 @@ footer {
   border: none;
   outline: none;
 }
+@media all and (max-width: 600px) {
+  .form__input {
+    min-width: 220px;
+    margin-right: 30px;
+    font-size: 15px;
+  }
+}
 
 .form__button {
   display: inline-flex;
