@@ -152,8 +152,10 @@ main
   cursor: pointer
   & svg
     transition: all 0.3s linear
-  &:hover svg
-    transform: rotate(-90deg)
+  @media (hover: hover)
+    &:hover svg
+      transform: rotate(-90deg)
+
   & a
     position: absolute
     z-index: 100
@@ -200,8 +202,9 @@ footer
   background-color: #DF2224
   cursor: pointer
   transition: all 0.3s linear
-  &:hover
-    background-color: #162C4E
+  @media (hover: hover)
+    &:hover
+      background-color: #162C4E
 
 
 //==============================MODAL========================

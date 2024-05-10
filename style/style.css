@@ -191,8 +191,10 @@ main {
 .main__btn svg {
   transition: all 0.3s linear;
 }
-.main__btn:hover svg {
-  transform: rotate(-90deg);
+@media (hover: hover) {
+  .main__btn:hover svg {
+    transform: rotate(-90deg);
+  }
 }
 .main__btn a {
   position: absolute;
@@ -248,8 +250,10 @@ footer {
   cursor: pointer;
   transition: all 0.3s linear;
 }
-.form__button:hover {
-  background-color: #162C4E;
+@media (hover: hover) {
+  .form__button:hover {
+    background-color: #162C4E;
+  }
 }
 
 #modal-success {
