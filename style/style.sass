@@ -1,3 +1,5 @@
+*
+  box-sizing: border-box
 html,body
   height: 100%
   overflow-x: hidden
@@ -37,6 +39,15 @@ html,body
       z-index: 100
       width: 100%
       height: 100%
+
+.header__logo
+  opacity: 0
+  transform: translateY(-40px)
+  transition: opacity 1s ease, transform 1s ease
+.header__logo.animate
+   opacity: 1
+   transform: translateY(0)
+
 //----------------------------------MAIN----------------------------
 
 main
@@ -49,6 +60,13 @@ main
   flex-direction: column
   align-items: center
 
+hgroup
+  opacity: 0
+  transform: translateY(-40px)
+  transition: opacity 1s ease, transform 1s ease
+hgroup.animate
+  opacity: 1
+  transform: translateY(0)
 .form__input.error
   border: 1px solid red
   border-radius: 40px
@@ -56,15 +74,18 @@ main
   box-shadow: 2px 2px 4px 2px rgba(255, 0, 0, 0.35)
 
 .main__title
+  margin-bottom: 10px
   font-size: 72px
   font-family: "Poppins", sans-serif
   font-weight: 700
   font-style: normal
+  line-height: 104%
   text-transform: uppercase
   text-align: center
   color: rgb(165, 174, 187)
   -webkit-text-stroke: 0.5px #162C4E
   text-shadow: rgba(0, 0, 0, 0.2) 0 4px 4px
+  cursor: default
   @media all and (max-width: 1300px)
     font-size: 36px
   @media all and (max-width: 1000px)
@@ -84,10 +105,26 @@ main
   font-weight: 400
   font-style: normal
   text-align: center
+  transition: opacity 1s ease, transform 1s ease
+  cursor: default
+
+.main__subtitle.animate
+  opacity: 1
+  transform: translateY(0)
+
 
 //-----------------------TIMER---------------------------------
 .main__timer
   margin-bottom: 100px
+  opacity: 0
+  transform: translateY(-40px)
+  transition: opacity 1s ease, transform 1s ease
+  cursor: default
+
+.main__timer.animate
+  opacity: 1
+  transform: translateY(0)
+
 .timer__wrapper
   display: flex
   gap: 10px
@@ -105,6 +142,7 @@ main
     font-size: 36px
 
 .day__name
+
   display: inline-flex
   justify-content: center
   align-items: center
@@ -126,7 +164,7 @@ main
   background-position: center
   background-size: 150px 70px
 
-//-----------------------BTN---------------------------------
+
 .main__btn
   display: flex
   position: relative
@@ -152,6 +190,14 @@ main
       font-size: 18px
       font-family: "Poppins", sans-serif
       font-weight: 400
+  opacity: 0
+  transform: translateY(-40px)
+  transition: opacity 1s ease, transform 1s ease
+
+.main__btn.animate
+  opacity: 1
+  transform: translateY(0)
+
 
 //----------------------------------FOOTER----------------------------
 footer
@@ -207,7 +253,7 @@ footer
 
 .modal__inner
   position: relative
-  width: 270px
+  width: 320px
   height: 370px
   padding: 0 20px
   display: flex
@@ -249,5 +295,100 @@ footer
   font-weight: 400
   font-style: normal
   cursor: pointer
+  transition: all 0.3s ease
+  @media (hover: hover)
+    &:hover
+      background-color: #DF2224
+
+  //=====================ACCORDION==========================
+//.accordion
+//  margin: 109px 100px
+//  height: 630px
+//  display: flex
+//  overflow-x: hidden
+//.acc-block
+//  display: flex
+//  height: 100%
+//  flex: 0.5
+//  flex-direction: row
+//
+//
+//.acc__title-block
+//  padding: 0 26px 20px 26px
+//  display: inline-flex
+//  flex-direction: column
+//  justify-content: flex-end
+//  align-items: flex-end
+//  background: rgb(22, 44, 78)
+//  & h2
+//    writing-mode: vertical-lr
+//    transform: rotate(180deg)
+//    color: rgb(255, 255, 255)
+//    font-family: "Poppins", sans-serif
+//    font-size: 32px
+//    font-weight: 400
+//    line-height: 100%
+//    text-align: left
+//    margin-bottom: 40px
+//  & span
+//    color: rgb(255, 255, 255)
+//    font-family: "Poppins", sans-serif
+//    font-size: 32px
+//    font-weight: 400
+//    line-height: 100%
+//    text-align: left
+//.acc__bg
+//  background: center  no-repeat
+//  background-size: cover
+//  opacity: 0
+//  width: 0
+//
+//.acc-block .acc__bg .acc__main-content
+//  opacity: 0
+//
+//.acc-block.active
+//  flex: 8
+//
+//.acc-block.active .acc__bg
+//  width: 100%
+//  opacity: 1
+//.acc-block.active .acc__main-content
+//  opacity: 1
+//
+//.acc__main-content
+//  display: inline-flex
+//  flex-direction: column
+//  justify-content: flex-end
+//  padding: 0 66px 50px 42px
+//  height: 100%
+//  backdrop-filter: blur(20px)
+//  background: rgba(18, 18, 18, 0.8)
+//  & h2
+//    margin-bottom: 12px
+//    color: rgb(255, 255, 255)
+//    font-family: "Poppins", sans-serif
+//    font-size: 24px
+//    font-weight: 400
+//    line-height: 120%
+//    text-align: left
+//  & span
+//    margin-bottom: 25px
+//    color: rgba(255, 255, 255, 0.8)
+//    font-family: "Poppins", sans-serif
+//    font-size: 18px
+//    font-weight: 400
+//    line-height: 150%
+//    text-align: left
+//  & button
+//    padding: 20px 56px
+//    color: rgba(255, 255, 255, 0.8)
+//    font-family: "Poppins", sans-serif
+//    font-size: 18px
+//    font-weight: 400
+//    line-height: 150%
+//    text-align: left
+//    border: 2px solid rgba(255, 255, 255, 0.8)
+//    border-left: 7px solid rgba(255, 255, 255, 0.8)
+
 
 
